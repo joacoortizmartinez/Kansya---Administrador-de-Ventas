@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'iniciar_negocio' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Iniciar Negocio</button>
+</form>

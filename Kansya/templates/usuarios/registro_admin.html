@@ -1,0 +1,6 @@
+<h2>Registro Administrador</h2>
+<form method="post" action="{% url 'registro_admin' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Registrar</button>
+</form>
