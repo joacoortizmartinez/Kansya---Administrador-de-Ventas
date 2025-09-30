@@ -8,6 +8,7 @@ class Caja(models.Model):
     fecha_apertura = models.DateTimeField(auto_now_add=True)
     fecha_cierre = models.DateTimeField(null=True, blank=True)
     hora_creacion = models.TimeField(auto_now_add=True)
+    hora_cierre = models.TimeField(auto_now_add=True, null=True, blank=True)
 
     monto_inicial = models.DecimalField(max_digits=10, decimal_places=2)
     monto_final = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)

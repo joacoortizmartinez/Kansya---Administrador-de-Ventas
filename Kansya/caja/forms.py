@@ -19,4 +19,16 @@ class CajaForm(forms.ModelForm):
             usuarios = User.objects.filter(negocio=negocio)
             self.fields['usuario_apertura'].queryset = usuarios
 
+class CerrarCajaForm(forms.ModelForm):
+    class Meta:
+        model = Caja
+        fields = ['monto_final', 'usuario_cierre']
+        labels = {
+            'monto_final': 'Monto de cierre de efectivo'
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(CerrarCajaForm, self).__init__(*args, **kwargs)
+        self.fields['usuario_cierre'].queryset = User.objects.none()
+
 
