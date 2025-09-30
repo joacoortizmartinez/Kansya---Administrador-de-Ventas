@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('registro-admin/', views.RegistrarAdmin, name='registro_admin'),
-    path('registro-admin/', views.RegistrarAdmin, name='registro_empleado'),
+    path('registro-empleado/', views.RegistrarEmpleado, name='registro_empleado'),
 ]

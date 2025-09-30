@@ -58,6 +58,6 @@ def RegistrarEmpleado(request):
             except Exception as e:
                 messages.error(request, f"Error: {e}")
     else:
-        form = RegistroAdminForm()
+        form = RegistroEmpleadoForm()
 
-    return render(request, "usuarios/registro_empleado.html")
+    return render(request, "usuarios/registro_empleado.html", {"form": form})

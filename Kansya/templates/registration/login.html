@@ -1,0 +1,11 @@
+{% block content %}
+    <h2>Iniciar Sesión</h2>
+
+
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Entrar</button>
+      <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endblock %}

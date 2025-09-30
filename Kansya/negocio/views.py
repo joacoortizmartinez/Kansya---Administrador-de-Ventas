@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import NegocioForm
 
+
+
 def CrearNegocio(request):
-    if hasattr(request.user, 'negocio'):
+    if hasattr(request.user, 'negocio'):                                            # hasattr: funcion que verifica si un objeto tiene un atributo especifico hasattr(objeto, 'atributo')
         messages.warning(request, "Ya tenes un negocio creado")
         return redirect("home")
 
